@@ -8,8 +8,6 @@ def export():
     SERVER = os.getenv("SERVER")
     DATABASE = os.getenv("DATABASE")
     DRIVER = 'SQL SERVER'
-    USERNAME = os.getenv("USERNAME")    #not used
-    PASSWORD = ''                           #not used
     DATABASE_CONNECTION = f'mssql://@{SERVER}/{DATABASE}?driver={DRIVER}'
 
     engine = create_engine(DATABASE_CONNECTION)
